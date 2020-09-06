@@ -18,12 +18,11 @@ int main()
     cout <<"After set the position 4 to 0, nTest ="<<nTest<<endl;
     bool nFlag;
         for (int i=0; i<16; i++){ //实现翻转
-		nFlag = nTest & (1<<i);
-		if (nFlag) {
-			nTest &= ~(1<<i);
-		}
-		else{
-			nTest |= 1<<i;
+		nFlag = nTest & (1<<i); //'1<<i': 将数字1左移i位
+		if (nFlag) { // if true
+			nTest &= ~(1<<i); // set value of ith bit to 0
+		} else {      // if false
+			nTest |= 1<<i; // set value of ith bit to 1
 		}
     }
 	cout <<"After flip, nTest = "<<nTest<<endl;
