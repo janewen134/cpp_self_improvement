@@ -1,8 +1,9 @@
 #include <iostream>
 using namespace std;
+int a = 123;
 int main() {
     const double pi(3.14159);
-    int radius;
+    int radius; // should declare type of radius before enter its value by keyboard
     cout << "Please enter the radius!\n";
     cin >> radius;
     cout << "Please enter another radius" << '\n';
