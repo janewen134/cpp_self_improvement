@@ -1,6 +1,6 @@
 #include <iostream>
 using namespace std;
-//判断n是否为回文数
+// check if the parameter is a palindromic number
 bool symm(unsigned n) {
     unsigned i = n;
     unsigned m = 0;
@@ -8,18 +8,11 @@ bool symm(unsigned n) {
         m = m * 10 + i % 10;
         i /= 10;
     }
+    // 太愚蠢了，找了半天错，原来是把==写成=了。主要这玩意它不给你报错很坑啊。
+    // 吐槽的注释不敢用英语写，用汉语出出气得了。气死我了。
     return m == n;
 }
 int main() {
-	// for(unsigned m = 11; m < 1000; m++)
-	//   if (symm(m) && symm(m * m) &&
-	//       symm(m * m * m)) {
-	//     cout << "m = " << m;
-	//     cout << "  m * m = " << m * m;
-	//     cout << "  m * m * m = "
-	//          << m * m * m << endl;
-	//   }
-	// return 0;
     for (unsigned m = 11; m < 1000; m++) {
         if (symm(m) && symm(m*m) && symm(m*m*m)) {
             cout << m << endl;
