@@ -5,10 +5,6 @@ int main() {
     int value = 0;
     cout << "Enter an 8 bit binary number ";
     for (int i = 7; i > 0; i--){
-        // char ch;
-	    // cin >> ch;
-	    // if (ch == '1')
-	    //     value += static_cast<int>(power(2, i));
         char ch;
         cin >> ch;
         if (ch == '1')
