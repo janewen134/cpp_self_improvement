@@ -1,7 +1,7 @@
 #include <iostream>
 #include <cstdlib>
 using namespace std;
- 
+
 //投骰子、计算和数、输出和数
 int rollDice() {
     int die1 = 1 + rand() % 6;
@@ -12,7 +12,7 @@ int rollDice() {
 }
 
 enum GameStatus { WIN, LOSE, PLAYING };
- 
+
 int main() {
     int sum, myPoint;
     GameStatus status;
@@ -21,7 +21,7 @@ int main() {
     cout << "please enter an unsigned integer: ";
     cin >> seed;
     srand(seed); // save the seed for rand()
- 
+    
 	sum = rollDice(); //第一轮投骰子、计算和数
     switch (sum) {
         case 7:   //如果和数为7或11则为胜,状态为WIN
@@ -34,7 +34,7 @@ int main() {
         case 12:
         status = LOSE;
         break;
-        
+
         default: /*其它情况,游戏尚无结果,状态为
                 PLAYING,记下点数,为下一轮做准备 */
         status = PLAYING;
