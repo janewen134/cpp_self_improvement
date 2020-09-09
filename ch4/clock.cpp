@@ -3,12 +3,19 @@ using namespace std;
 class Clock {
     public:
         Clock(int newH, int newW, int newS); // constructor
+        Clock();
         void setTime(int newH, int newM, int newS);
         void showTime();
     private:
         int hour, minute, second;    
 };
 //构造函数的实现：
+Clock::Clock() {
+    hour = 0;
+    minute = 0;
+    second = 0;
+
+}
 // the former Clock refers to the Class, and the latter the constructor method
 // constructor doesn't have return type
 Clock::Clock(int newH, int newM, int newS): hour(newH), minute(newM), second(newS) 
@@ -39,5 +46,7 @@ int main() {
     c.showTime();
     c.setTime(1,1,1);
     c.showTime();
+    Clock clock;
+    clock.showTime();
     return 0;
 }
