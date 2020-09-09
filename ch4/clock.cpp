@@ -10,6 +10,7 @@ class Clock {
         int hour, minute, second;    
 };
 //构造函数的实现：
+// rewrite default constructor
 Clock::Clock() {
     hour = 0;
     minute = 0;
@@ -46,6 +47,7 @@ int main() {
     c.showTime();
     c.setTime(1,1,1);
     c.showTime();
+    
     Clock clock;
     clock.showTime();
     return 0;
