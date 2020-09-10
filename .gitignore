@@ -32,3 +32,4 @@
 *.app
 ch2/.DS_Store
 *.json
+*.code-workspace
